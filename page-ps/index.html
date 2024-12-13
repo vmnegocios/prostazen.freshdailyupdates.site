@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizarre Medical Trick</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #000;
+            margin: 30px 0 20px;
+        }
+
+        h1 span {
+            color: #ff0000;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #000;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+        }
+
+        #countdown {
+            font-size: 16px;
+            color: #000;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #888888;
+            text-align: center;
+            margin: 40px auto 20px;
+            max-width: 800px;
+            line-height: 1.5;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Image -->
+    <img src="images/imagem1.webp" alt="Medical Trick Image">
+
+    <!-- Headline -->
+    <h1>Check Out The Bizarre Medical Trick That <span>Shrinks The Prostate</span> Overnight</h1>
+
+    <!-- Subheadline -->
+    <h2>Watch the video for free now before spots run out</h2>
+
+    <!-- Animated GIF -->
+    <a href="https://getprostazen.com/vsl?aff_id=159"><img src="images/gif1.gif" alt="Medical GIF"></a>
+
+    <!-- Countdown Timer -->
+    <div id="countdown">Spots remaining: 11</div>
+
+    <!-- Button -->
+    <a href="https://getprostazen.com/vsl?aff_id=159" class="button">Click To Watch The Video Now</a>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+        This site is not affiliated with TikTok or TikTok Inc. Additionally, this site is not endorsed by TikTok in any way. TIKTOK is a registered trademark of TikTok Inc.<br><br>
+        TikTok provides a platform for advertising, but the opinions and/or views expressed on this site do not reflect the official position of TikTok Inc.<br><br>
+        The opinions and/or views expressed on the social media platforms of our site, including, but not limited to, our blogs and TikTok pages, represent the thoughts of individual bloggers and online communities, and not necessarily those of our site or any of its business partners, affiliates, or members of its management. The views and opinions expressed on these pages do not reflect the views of the site on which they are published, other sites affiliated with the site, the staff involved in maintaining the site, or any member of the site.<br><br>
+        Any opinions or views expressed on the social media platforms of this site are not representative of TikTok Inc.
+    </div>
+
+    <script>
+        let spots = 11;
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            if (spots > 3) {
+                spots--;
+                countdownElement.textContent = `Spots remaining: ${spots}`;
+                setTimeout(updateCountdown, Math.random() * (7000 - 5000) + 5000);
+            } else if (spots > 0) {
+                spots--;
+                countdownElement.textContent = `Spots remaining: ${spots}`;
+                setTimeout(updateCountdown, 15000);
+            }
+        }
+
+        updateCountdown();
+    </script>
+</body>
+</html>
